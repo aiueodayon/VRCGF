@@ -9,6 +9,10 @@
 
 ---
 
+
+**Languages**: 日本語 | [English](README.en.md)
+
+
 ## 🪐 Overview
 
 **VRC_GF** は、VRChatの世界探索をより便利で楽しくするためのツールです。  
@@ -42,7 +46,6 @@
 ## 📸 Screenshots
 
 > UIイメージをここに追加予定。  
-> 例：  
 > ![](./screenshots/main-ui.png)  
 > ![](./screenshots/dashboard.png)
 
