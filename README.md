@@ -113,7 +113,7 @@ VRChatの**グループ・イベントを検索・整理・通知できるツー
 
 ## 📄 ライセンス
 
-MIT License © [AstralDAO](https://astraldao.shop)
+MIT License © [Astral](https://astraldao.shop)
 
 ---
 
@@ -121,5 +121,5 @@ MIT License © [AstralDAO](https://astraldao.shop)
   <img src="/docs/banner.png" width="600" alt="VRCGF Banner"><br><br>
   <strong>VRChat_GroupFinder</strong> — グループ活動を、もっと見やすく、もっと楽しく。  
   <br><br>
-  <sub>© 2025 AstralDAO | Designed for the VRChat Community</sub>
+  <sub>© 2025 Astral | Designed for the VRChat Community</sub>
 </div>
