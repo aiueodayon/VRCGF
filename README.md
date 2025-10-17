@@ -1,4 +1,4 @@
-# 🌌 Finder
+# VRChat_GroupFinder (VRC_GF)
 
 ![License](https://img.shields.io/github/license/yourname/finder?style=flat-square)
 ![Version](https://img.shields.io/github/v/release/yourname/finder?style=flat-square)
@@ -11,7 +11,7 @@
 
 ## 🪐 Overview
 
-**Finder** は、VRChatの世界探索をより便利で楽しくするためのツールです。  
+**VRC_GF** は、VRChatの世界探索をより便利で楽しくするためのツールです。  
 タグ・カテゴリ別おすすめ表示やカレンダー機能、テーマカスタムなどを備え、  
 あなたの「次に行くワールド」を見つける体験をサポートします。
 
@@ -96,7 +96,6 @@ npm run dev
 ## 💬 Links
 
 * 🌐 **Website**: [https://finder.astraldao.shop](https://finder.astraldao.shop)
-* 🐙 **GitHub**: [https://github.com/yourname/finder](https://github.com/yourname/finder)
 * 💫 **Author**: [Astral](https://github.com/aiueodayon)
 
 ---
