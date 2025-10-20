@@ -98,7 +98,7 @@ VRCGFは、VRChatの体験を豊かにするための**コンパニオンツー�
 
 - **不具合報告・機能提案**: [Issues](https://github.com/aiueodayon/VRCGF/issues) にて受付中  
 - **連絡先**: [astraldao.shop](https://astraldao.shop)  
-- **開発協力・翻訳貢献**: CONTRIBUTING.md をご覧ください  
+- **開発協力・翻訳貢献**: [CONTRIBUTING.md](CONTRIBUTING.md) をご覧ください  
 
 ---
 
