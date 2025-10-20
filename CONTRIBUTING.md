@@ -113,21 +113,6 @@ Pull Request（PR）を送る前に、以下を確認してください：
 
 ---
 
-## 🙏 Thank You!  
-
-VRCGF の開発に関わってくださった皆さんに感謝します。  
-
-<div align="center">
-
-<a href="https://github.com/KawaiiAstral" target="_blank" style="text-decoration: none; margin: 0 10px;">
-  <img src="https://github.com/KawaiiAstral.png?size=64" width="64" height="64" alt="KawaiiAstral" style="border-radius:50%; display:block;" />
-  <sub>KawaiiAstral</sub>
-</a>
-
-</div>
-
----
-
 <div align="center">
 <sub>このプロジェクトは VRChat に公式に関連するものではありません。<br>
 VRChat およびそのロゴは VRChat Inc. の登録商標です。</sub>
