@@ -1,111 +1,122 @@
-# 🌌 VRChat Group Finder (VRC_GF)
+<div align="center">
 
-![License](https://img.shields.io/github/license/yourname/finder?style=flat-square)
-![Version](https://img.shields.io/github/v/release/yourname/finder?style=flat-square)
-![Issues](https://img.shields.io/github/issues/yourname/finder?style=flat-square)
-![Stars](https://img.shields.io/github/stars/yourname/finder?style=flat-square)
+# 🔍 VRChat_GroupFinder (VRCGF)
 
-> 🛰️ Discover, track, and share VRChat worlds effortlessly.
+![License](https://img.shields.io/github/license/aiueodayon/VRCGF?style=flat-square)
+![Version](https://img.shields.io/github/v/release/aiueodayon/VRCGF?style=flat-square)
+![Issues](https://img.shields.io/github/issues/aiueodayon/VRCGF?style=flat-square)
 
----
+| [日本語](README.md) | English |
 
-**Languages:** [🇯🇵 Japanese](README.md) | 🇬🇧 English
+</div>
 
----
-
-## 🪐 Overview
-
-**VRC_GF** is a powerful tool designed to make exploring VRChat worlds easier and more enjoyable.
-With features like tag-based recommendations, calendar scheduling, and custom themes,
-it helps you discover your *next favorite world* in VRChat.
-
----
-
-## ✨ Features
-
-| Category                      | Description                                                   |
-| ----------------------------- | ------------------------------------------------------------- |
-| 🧭 **World Discovery**        | Recommended worlds by tag or category with a custom algorithm |
-| 🗓️ **Schedule Management**   | Visualize events and visit plans in calendar view             |
-| 📊 **Statistics Dashboard**   | Automatically track playtime and visit trends                 |
-| ❤️ **Favorites**              | Bookmark and organize frequently visited worlds               |
-| 🎨 **Themes & Customization** | Plugin, extension, and theme support for a personalized UI    |
-| 🌐 **World Link Integration** | Open or share VRChat world URLs directly                      |
-| 🕒 **Timezone Support**       | View your friends' schedules in local time                    |
+> [!WARNING]
+> **🚧 Currently in Development 🚧**
+>
+> This project is under active development, and features may change frequently.  
+> Use it at your own risk when building or testing.  
+> Data structure changes may break compatibility between updates.  
+> Until the official release, **use in production environments is not recommended**.
 
 ---
 
-## 🧩 Extensibility
-
-* **🔌 Plugin API**: Easily extend functionality with third-party plugins
-* **🎨 Theme Engine**: Customize appearance using CSS-like themes
-* **🌍 Finder Hub**: Share and discover popular plugins & themes *(coming soon)*
+**Connecting your time, more easily.**  
+**VRCGF** is a search platform designed to make discovering VRChat groups and events more convenient.
 
 ---
 
-## 📸 Screenshots
+## ✨ Key Features
 
-> UI previews coming soon.
-> ![](./screenshots/main-ui.png)
-> ![](./screenshots/dashboard.png)
+### 🧭 Group & Event Search
 
----
+- **Search all groups and events on VRChat in one place**  
+- Clean and easy-to-read **card layout**  
+- **Infinite scroll** for seamless browsing  
+- Advanced **filtering** by category, date, participant count, visibility, and more  
 
-## 🗺️ Roadmap
+### 📅 Google Calendar Integration
 
-* [ ] Mobile-friendly UI
-* [ ] VR in-browser support
-* [ ] Friend sharing feature
-* [ ] Finder Cloud Sync (local + optional cloud backup)
+- **Add events to Google Calendar with one click**  
+- Automatically sync and set reminders with ease  
+- Smoothly manage your “which events to attend” schedule  
 
----
+### 🔔 Start Notifications & Instance Tracking
 
-## 🧠 Architecture
+- **Automatic notifications** when an event starts  
+- Get notified the moment an **instance** is created  
+- Never miss your chance to join an event again  
 
-```mermaid
-graph TD
-  A[Finder Core] --> B[UI Layer]
-  A --> C[Plugin API]
-  C --> D[Theme Engine]
-  C --> E[Recommendation System]
-```
+### 💡 Refined UI Design
 
----
-
-## 🤝 Contributing
-
-Contributions are always welcome!
-If you're interested in **plugin development** or **improving the recommendation algorithm**, we’d love your help.
-
-```bash
-# Clone the repository
-git clone https://github.com/aiueodayon/VRC_GF.git
-
-# Install dependencies
-npm install
-
-# Start development
-npm run dev
-```
+- Simple and modern **card-based layout**  
+- Dark/Light mode support (planned)  
+- **Favorites** feature for tracking your preferred events  
 
 ---
 
-## 📜 License
+## 🔒 Security & Policy
 
-Licensed under the [MIT License](./LICENSE) © 2025 [Astral](https://github.com/aiueodayon)
+- ✅ **No login information is stored**  
+- ✅ **Local storage–based safe design**  
+- ✅ **No user tracking or monitoring features**  
+- ❌ **No unauthorized use of the official VRChat API**
+
+VRCGF is a **companion tool** that enhances the VRChat experience.  
+It does **not modify or interfere with the game client** in any way.
 
 ---
 
-## 💫 Links
+## 🧩 Comparison with Other Tools
 
-* 🌐 **Website:** [finder.astraldao.shop](https://finder.astraldao.shop)
-* 👤 **Author:** [Astral (aiueodayon)](https://github.com/aiueodayon)
+| Tool | Main Purpose | Key Feature |
+|------|---------------|--------------|
+| [VRCX](https://github.com/vrcx-team/VRCX) | Friend & world management | Excellent for activity tracking and visualization |
+| [VRCJournal](https://github.com/sakamotch/VRCJournal) | Memory & play log management | Ideal for logging and organizing your VRChat experiences |
+| **VRCGF (This Tool)** | Group & event search | Specialized for discovering and joining events |
+
+---
+
+## 📦 Download & Usage
+
+> Currently in **alpha stage**.  
+> Please wait for the official release.
+
+---
+
+## 📸 Screenshots (Coming Soon)
+
+- Group search interface  
+- Event detail card view  
+- Google Calendar integration screen  
+- Notification settings panel  
+
+(Will be added upon official release)
+
+---
+
+## 🤝 Feedback & Contact
+
+- **Bug reports & feature requests:** via [Issues](https://github.com/aiueodayon/VRCGF/issues)  
+- **Contact:** [astraldao.shop](https://astraldao.shop)  
+- **For contributions (development, translation, etc.):** see `CONTRIBUTING.md`  
+
+---
+
+## 📄 License
+
+This project is licensed under the **Mozilla Public License 2.0 (MPL-2.0)**  
+with the following **additional terms**:
+
+- You may **not sell modified versions** of this software as a paid product.  
+- You **may create, distribute, and sell extensions or plugins** that interface  
+  with this software, under any license (including commercial ones).  
+
+See the full text of MPL-2.0 here:  
+🔗 [https://www.mozilla.org/MPL/2.0/](https://www.mozilla.org/MPL/2.0/)
 
 ---
 
 <div align="center">
-  <img src="/docs/banner.png" width="600" alt="VRCGF Banner"><br><br>
-  <strong>VRChat_GroupFinder</strong> — *“Find your next favorite world — faster, smarter, and together.”*  
-  <br><br>
-  <sub>© 2025 Astral | Designed for the VRChat Community</sub>
+<sub>This project is not affiliated with or endorsed by VRChat.<br>
+VRChat and its logo are registered trademarks of VRChat Inc.</sub>
 </div>
