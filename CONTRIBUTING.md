@@ -119,8 +119,9 @@ VRCGF の開発に関わってくださった皆さんに感謝します。
 
 <div align="center">
 
-<a href="https://github.com/KawaiiAstral" target="_blank">
-  <img src="https://github.com/KawaiiAstral.png?size=64" width="64" height="64" alt="username1" style="border-radius:50%;" />
+<a href="https://github.com/KawaiiAstral" target="_blank" style="text-decoration: none; margin: 0 10px;">
+  <img src="https://github.com/KawaiiAstral.png?size=64" width="64" height="64" alt="KawaiiAstral" style="border-radius:50%; display:block;" />
+  <sub>KawaiiAstral</sub>
 </a>
 
 </div>
