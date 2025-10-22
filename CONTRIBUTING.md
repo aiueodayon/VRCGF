@@ -38,11 +38,7 @@ VRChat_GroupFinder（以下 VRCGF）は、VRChatのグループやイベント�
 Pull Request（PR）を送る前に、以下を確認してください：
 
 1. **`main` ブランチ**を最新にしてからブランチを切ってください。  
-```bash
-   git checkout main
-   git pull origin main
-   git checkout -b feature/my-feature
-```
+
 
 2. **コードスタイル**は既存のフォーマットに合わせてください。
 
