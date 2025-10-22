@@ -6,7 +6,7 @@
 ![Version](https://img.shields.io/github/v/release/aiueodayon/VRCGF?style=flat-square)
 ![Issues](https://img.shields.io/github/issues/aiueodayon/VRCGF?style=flat-square)
 
-| 日本語 | [English](README.en.md) | [中文](README.zh.md) |
+| 日本語 | [English](README.en.md) | [中文](README.zh.md) | [Français](README.fr.md) |
 
 </div>
 
