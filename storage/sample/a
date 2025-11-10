@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>個人サークル検索サイト</title>
+<title>検索</title>
 <style>
   body {
     font-family: sans-serif;
@@ -99,16 +99,15 @@
 </head>
 <body>
 
-<h1>個人サークル検索</h1>
+<h1>検索</h1>
 <div class="search-box">
-  <input id="searchInput" type="text" placeholder="サークル名・タグ などで検索" />
+  <input id="searchInput" type="text" placeholder="Group名・タグ などで検索" />
 </div>
 <div class="results-count" id="count">0 件</div>
 <div class="grid" id="results"></div>
-<div class="empty" id="empty" style="display:none;">該当するサークルがありません</div>
+<div class="empty" id="empty" style="display:none;">該当するグループがありません</div>
 
 <script>
-// ★ ここにサークルデータを入れる（画像はURL）
 const circles = [
   {
     name: "サンプル1",
@@ -120,7 +119,7 @@ const circles = [
     name: "サンプル2",
     image: "https://raw.githubusercontent.com/aiueodayon/VRCGF/refs/heads/main/storage/sample/VRCGF2.png",
     description: "サンプルです。",
-    tags: ["漫画", "サンプル"]
+    tags: ["創作", "サンプル"]
   }
 ];
 
