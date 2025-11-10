@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>個人サークル検索サイト</title>
+<style>
+  body {
+    font-family: sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    margin: 0 0 20px;
+    font-size: 28px;
+  }
+  .search-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  .results-count {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  /* --- Flip Card (縦長 B0 比率) --- */
+  .card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1456 / 1030; /* 縦長 */
+    perspective: 1200px;
+  }
+  .inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  .card:hover .inner {
+    transform: rotateY(180deg);
+  }
+  .front,
+  .back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .back {
+    background: white;
+    transform: rotateY(180deg);
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-sizing: border-box;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .tag {
+    background: #e8e8e8;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  .empty {
+    text-align: center;
+    color: #666;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<h1>個人サークル検索</h1>
+<div class="search-box">
+  <input id="searchInput" type="text" placeholder="サークル名・タグ などで検索" />
+</div>
+<div class="results-count" id="count">0 件</div>
+<div class="grid" id="results"></div>
+<div class="empty" id="empty" style="display:none;">該当するサークルがありません</div>
+
+<script>
+// ★ ここにサークルデータを入れる（画像はURL）
+const circles = [
+  {
+    name: "サンプル1",
+    image: "https://raw.githubusercontent.com/aiueodayon/VRCGF/refs/heads/main/storage/sample/VRCGF1.png",
+    description: "サンプルです。",
+    tags: ["創作", "サンプル"]
+  },
+  {
+    name: "サンプル2",
+    image: "https://raw.githubusercontent.com/aiueodayon/VRCGF/refs/heads/main/storage/sample/VRCGF2.png",
+    description: "サンプルです。",
+    tags: ["漫画", "サンプル"]
+  }
+];
+
+const resultsEl = document.getElementById("results");
+const countEl = document.getElementById("count");
+const emptyEl = document.getElementById("empty");
+
+function render(list){
+  resultsEl.innerHTML = '';
+  if(list.length === 0){
+    emptyEl.style.display = 'block';
+    countEl.textContent = '0 件';
+    return;
+  }
+  emptyEl.style.display = 'none';
+  countEl.textContent = list.length + ' 件';
+
+  for(const c of list){
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const inner = document.createElement('div');
+    inner.className = 'inner';
+
+    const front = document.createElement('div');
+    front.className = 'front';
+    const img = document.createElement('img');
+    img.src = c.image || '';
+    front.appendChild(img);
+
+    const back = document.createElement('div');
+    back.className = 'back';
+
+    const name = document.createElement('h3');
+    name.textContent = c.name;
+    const desc = document.createElement('p');
+    desc.textContent = c.description;
+    const tags = document.createElement('div');
+    tags.className = 'tags';
+    (c.tags || []).forEach(t => {
+      const sp = document.createElement('span');
+      sp.className='tag';
+      sp.textContent = t;
+      tags.appendChild(sp);
+    });
+
+    back.appendChild(name);
+    back.appendChild(desc);
+    back.appendChild(tags);
+
+    inner.appendChild(front);
+    inner.appendChild(back);
+    card.appendChild(inner);
+    resultsEl.appendChild(card);
+  }
+}
+
+render(circles);
+
+// --- search ---
+document.getElementById("searchInput").addEventListener("input", e =>{
+  const q = e.target.value.trim().toLowerCase();
+  const filtered = circles.filter(c =>
+    c.name.toLowerCase().includes(q) ||
+    c.tags.some(t => t.toLowerCase().includes(q))
+  );
+  render(filtered);
+});
+</script>
+
+</body>
+</html>
