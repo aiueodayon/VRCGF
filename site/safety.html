@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & License | VRCGF</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Page Header */
+        .page-header {
+            padding: 150px 20px 60px;
+            text-align: center;
+            background: linear-gradient(to bottom, #fdfdfd, #fff);
+        }
+
+        /* Security Grid */
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: var(--max-width);
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+
+        .sec-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 40px 30px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sec-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transform: translateY(-5px);
+        }
+
+        /* 状態を示すインジケーター */
+        .status-indicator {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .status-safe { background-color: #10B981; box-shadow: 0 0 10px rgba(16, 185, 129, 0.4); }
+        .status-lock { background-color: #6366F1; box-shadow: 0 0 10px rgba(99, 102, 241, 0.4); }
+
+        .sec-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .sec-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .sec-card p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            line-height: 1.7;
+        }
+
+        /* Data Flow Diagram (CSSのみで簡易図解) */
+        .data-flow-section {
+            background: var(--bg-sub);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .flow-container {
+            max-width: 800px;
+            margin: 60px auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-family: var(--font-tech);
+            font-size: 0.8rem;
+        }
+
+        .flow-box {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 20px 40px;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .flow-box.local { border-color: var(--accent); color: var(--accent); font-weight: bold; background: rgba(37,99,235,0.05); }
+        .flow-box.server { border-color: #e5e7eb; color: #999; border-style: dashed;}
+
+        .flow-arrow {
+            color: #ccc;
+            font-size: 1.2rem;
+            position: relative;
+        }
+        
+        .flow-arrow.blocked::after {
+            content: "×";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ef4444;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* License Section */
+        .license-container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 0 20px;
+        }
+
+        .license-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--text-main);
+            padding: 40px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .license-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 20px;
+        }
+
+        .license-tag {
+            background: #e5e7eb;
+            color: #555;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-family: var(--font-tech);
+        }
+
+        .permission-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .flow-container { flex-direction: column; gap: 40px; }
+            .flow-arrow { transform: rotate(90deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                VRCGF
+                <span class="logo-tag">ALPHA</span>
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Architecture</a></li>
+                <li><a href="safety.html" style="color: var(--accent);">Security</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header reveal">
+        <span class="hero-tech-tag" style="background: rgba(16, 185, 129, 0.1); color: #10B981;">TRUST & SAFETY</span>
+        <h1 style="font-size: 2.5rem; font-weight: 800; margin-top: 15px;">Security First Policy</h1>
+        <p style="color: var(--text-sub); margin-top: 10px;">
+            あなたのデータは、あなただけのもの。<br>VRCGFは「ローカルファースト」の原則に基づき設計されています。
+        </p>
+    </div>
+
+    <div class="security-grid">
+        <div class="sec-card reveal">
+            <div class="status-indicator status-safe"></div>
+            <div class="sec-icon">🔒</div>
+            <h3>Local Authentication</h3>
+            <p>VRChatの認証情報は、外部サーバーを経由せず、あなたのPC内から直接VRChat APIへ送信されます。中間サーバーによる傍受のリスクはありません。</p>
+        </div>
+
+        <div class="sec-card reveal">
+            <div class="status-indicator status-safe"></div>
+            <div class="sec-icon">💾</div>
+            <h3>On-Device Storage</h3>
+            <p>メモ、設定、キャッシュデータはすべて <code>AppData/Local</code> 内に保存されます。クラウドへのバックアップ機能すら排除し、完全性を保ちます。</p>
+        </div>
+
+        <div class="sec-card reveal">
+            <div class="status-indicator status-safe"></div>
+            <div class="sec-icon">🛡️</div>
+            <h3>No Tracking / Analytics</h3>
+            <p>「どのイベントを見たか」「何を検索したか」といった行動データの収集・送信機能は実装していません。Google Analytics等も不使用です。</p>
+        </div>
+
+        <div class="sec-card reveal">
+            <div class="status-indicator status-lock"></div>
+            <div class="sec-icon">⚖️</div>
+            <h3>API Compliance</h3>
+            <p>VRChat公式APIの利用規約を遵守し、正規のエンドポイントのみを使用。クライアントの改ざん（Modding）は一切行いません。</p>
+        </div>
+    </div>
+
+    <section class="data-flow-section">
+        <div class="reveal">
+            <h2 style="font-size: 2rem; font-weight: 700;">Data Flow Architecture</h2>
+            <p style="color: var(--text-sub);">UniLab Serverは存在しません。通信は常にDirectです。</p>
+            
+            <div class="flow-container">
+                <div class="flow-box local">
+                    YOUR PC<br>
+                    (VRCGF Client)
+                </div>
+                
+                <div class="flow-arrow">
+                    ➔ HTTPS
+                </div>
+                
+                <div class="flow-box" style="border-color: #10B981; color: #10B981; font-weight:bold;">
+                    VRChat API<br>
+                    (Official)
+                </div>
+
+                <div class="flow-arrow blocked">
+                    ➔
+                </div>
+
+                <div class="flow-box server">
+                    3rd Party Server<br>
+                    (UniLab / Others)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="license-container reveal">
+        <h2 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 30px;">Open Source License</h2>
+        
+        <div class="license-box">
+            <div class="license-header">
+                <h3 style="font-size: 1.2rem; margin: 0;">Mozilla Public License 2.0 (MPL-2.0)</h3>
+                <span class="license-tag">OSI APPROVED</span>
+            </div>
+            
+            <p style="margin-bottom: 20px; font-size: 0.95rem;">
+                本ソフトウェアはオープンソースであり、透明性が担保されています。
+                ソースコードはGitHubにて公開されており、以下の条件の下で利用可能です。
+            </p>
+
+            <ul class="permission-list">
+                <li style="color: #10B981;">
+                    <span style="font-weight: bold;">✓ Commercial Use</span> : 
+                    商用利用（企業での内部利用等）は可能です。
+                </li>
+                <li style="color: #10B981;">
+                    <span style="font-weight: bold;">✓ Modification</span> : 
+                    コードの改変や、プラグイン開発は自由です。
+                </li>
+                <li style="color: #ef4444;">
+                    <span style="font-weight: bold;">× Closed Source Distribution</span> : 
+                    改変したファイルを配布する場合、ソースコードの公開義務が発生します。
+                </li>
+                <li style="color: #ef4444;">
+                    <span style="font-weight: bold;">× Selling</span> : 
+                    単なる改変版を有料製品として販売することを禁じます。
+                </li>
+            </ul>
+            
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed #ccc; font-size: 0.85rem; color: #777;">
+                <strong>Disclaimer:</strong><br>
+                This project is not affiliated with VRChat Inc. VRChat and its logo are trademarks of VRChat Inc.<br>
+                本ツール利用により発生したいかなるトラブル（アカウント制限等）についても、開発者は責任を負いかねます。自己責任でご利用ください。
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="tech-bar" style="background: #fff; border: none;">
+            <p style="text-align: center; font-size: 0.8rem; color: var(--text-sub);">
+                &copy; 2024 UniLab / VRCGF Project.<br>
+                Secure by Design.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 100;
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        reveal();
+    </script>
+</body>
+</html>
