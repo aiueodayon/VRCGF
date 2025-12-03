@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features & Specs | VRCGF</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* ヘッダー下の余白調整 */
+        .page-header {
+            padding: 150px 20px 80px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 0%, rgba(37,99,235,0.03) 0%, transparent 50%);
+        }
+
+        /* Zigzag Layout for Features */
+        .feature-row {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            padding: 100px 20px;
+            max-width: 1100px; /* var(--max-width) と同等 */
+            margin: 0 auto;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .feature-row:last-child {
+            border-bottom: none;
+        }
+
+        .feature-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .feature-content {
+            flex: 1;
+        }
+
+        .feature-visual {
+            flex: 1.2;
+            position: relative;
+        }
+
+        /* 画像にテック感のある枠線を追加 */
+        .feature-visual img {
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            transition: transform 0.4s ease;
+        }
+        
+        .feature-visual:hover img {
+            transform: scale(1.02);
+        }
+
+        /* スペック比較表のデザイン */
+        .spec-section {
+            background: var(--bg-sub);
+            padding: 100px 20px;
+        }
+
+        .spec-table-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .spec-table th, .spec-table td {
+            padding: 20px 30px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .spec-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: var(--text-sub);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            width: 25%;
+        }
+
+        /* 自社製品のカラム強調 */
+        .col-vrcgf {
+            background: rgba(37, 99, 235, 0.03);
+            font-weight: 700;
+            color: var(--accent);
+            position: relative;
+        }
+        
+        .col-vrcgf::before {
+            content: "Recommended";
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 0.6rem;
+            background: var(--accent);
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: var(--font-tech);
+        }
+
+        .check-icon { color: var(--accent); font-weight: bold; }
+        .cross-icon { color: #ccc; }
+
+        @media (max-width: 768px) {
+            .feature-row, .feature-row:nth-child(even) {
+                flex-direction: column;
+                gap: 40px;
+                text-align: center;
+            }
+            .spec-table th, .spec-table td {
+                padding: 15px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                VRCGF
+                <span class="logo-tag">ALPHA</span>
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html" style="color: var(--accent);">Architecture</a></li> <li><a href="safety.html">Security</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header reveal">
+        <span class="hero-tech-tag">MODULES & SPECIFICATIONS</span>
+        <h1 style="font-size: 2.5rem; font-weight: 800; margin-top: 15px;">Core Capabilities</h1>
+        <p style="color: var(--text-sub); margin-top: 10px;">エンジニアリングされた各機能の詳細仕様。</p>
+    </div>
+
+    <section class="feature-row reveal">
+        <div class="feature-content">
+            <div class="arch-icon">✨</div>
+            <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 15px;">Visual Discovery Engine</h2>
+            <p style="color: var(--text-sub); margin-bottom: 20px;">
+                従来のテキストリスト型UIを廃止し、視覚情報優位のカードUIを採用。
+                イベントの空気感をサムネイルから直感的にパース（解析）できます。
+            </p>
+            <div class="code-snippet">
+                renderMode: 'magazine',<br>
+                lazyLoad: true,<br>
+                imageOptimization: 'high-quality'
+            </div>
+        </div>
+        <div class="feature-visual">
+            <img src="https://i.gyazo.com/93dc56c9c1392e15e98f836512f7540e.png" alt="Discovery UI">
+        </div>
+    </section>
+
+    <section class="feature-row reveal">
+        <div class="feature-content">
+            <div class="arch-icon">📝</div>
+            <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 15px;">Ephemeral Memo State</h2>
+            <p style="color: var(--text-sub); margin-bottom: 20px;">
+                「お気に入り」のような永続的な拘束力を持たない、一時的なステート管理。
+                脳のワーキングメモリを拡張するように、気になったものを一時バッファに保存します。
+            </p>
+            <ul style="font-family: var(--font-tech); font-size: 0.85rem; color: var(--text-main); margin-bottom: 20px;">
+                <li>> One-click Toggle</li>
+                <li>> Local Persistence (JSON)</li>
+                <li>> No Account Required</li>
+            </ul>
+        </div>
+        <div class="feature-visual">
+            <img src="https://i.gyazo.com/e3cdafbca77b79a769544cb5e083ca5a.png" alt="Memo Feature">
+        </div>
+    </section>
+
+    <section class="feature-row reveal">
+        <div class="feature-content">
+            <div class="arch-icon">🔍</div>
+            <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 15px;">Real-time Query Builder</h2>
+            <p style="color: var(--text-sub); margin-bottom: 20px;">
+                独自のクエリエンジンにより、入力と同時に結果をフィルタリング。
+                開催状況（Active/Pending）やカテゴリをミリ秒単位で絞り込みます。
+            </p>
+            <div class="code-snippet">
+                query.where('status', '==', 'active')<br>
+                     .and('category', 'contains', 'music')<br>
+                     .execute();
+            </div>
+        </div>
+        <div class="feature-visual">
+            <img src="https://i.gyazo.com/bd054e2e2ef2b8ac2c3ca4539ccc6b77.png" alt="Search Engine">
+        </div>
+    </section>
+
+    <section class="spec-section">
+        <div class="section-header reveal">
+            <span class="hero-tech-tag" style="background:transparent; color: var(--text-sub);">COMPARISON</span>
+            <h2>Toolchain Comparison</h2>
+            <p>ユースケースに応じた最適なツールの選択。</p>
+        </div>
+
+        <div class="spec-table-wrapper reveal">
+            <table class="spec-table">
+                <thead>
+                    <tr>
+                        <th>Feature / Tool</th>
+                        <th>VRCX</th>
+                        <th>VRCJournal</th>
+                        <th class="col-vrcgf">VRCGF (This)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Primary Focus</strong></td>
+                        <td>Friend Management</td>
+                        <td>Memories / Photos</td>
+                        <td class="col-vrcgf">Event Discovery</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data Locality</strong></td>
+                        <td>Local + Cloud</td>
+                        <td>Local</td>
+                        <td class="col-vrcgf">100% Local</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Event Search</strong></td>
+                        <td><span class="cross-icon">-</span></td>
+                        <td><span class="cross-icon">-</span></td>
+                        <td class="col-vrcgf"><span class="check-icon">✔</span> Advanced</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Memo Function</strong></td>
+                        <td><span class="cross-icon">-</span></td>
+                        <td>Log based</td>
+                        <td class="col-vrcgf"><span class="check-icon">✔</span> One-click</td>
+                    </tr>
+                    <tr>
+                        <td><strong>UI/UX Design</strong></td>
+                        <td>Dashboard</td>
+                        <td>Album</td>
+                        <td class="col-vrcgf">Modern Grid</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="tech-bar" style="background: #fff; border: none;">
+            <p style="text-align: center; font-size: 0.8rem; color: var(--text-sub);">
+                &copy; 2024 UniLab / VRCGF Project.<br>
+                Crafted with performance in mind.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 100;
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        reveal();
+    </script>
+</body>
+</html>
