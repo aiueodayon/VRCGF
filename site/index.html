@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRCGF | Modern Event Discovery Protocol</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                VRCGF
+                <span class="logo-tag">ALPHA</span>
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="features.html">Architecture</a></li>
+                <li><a href="safety.html">Security</a></li>
+                <li><a href="https://github.com/UniLab/VRCGF" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content reveal">
+                <span class="hero-tech-tag">v0.1.0-alpha :: BUILD_READY</span>
+                <h1>Discovery,<br>Re-Engineered.</h1>
+                <p class="hero-desc">
+                    VRChatでのイベント探索を、根本から再定義。<br>
+                    ローカルファーストな設計と、非同期処理による爆速なレスポンス。<br>
+                    あなたの体験を妨げない、真のコンパニオンツール。
+                </p>
+                <a href="#" class="btn-large" style="background: var(--text-main); color: #fff; padding: 15px 40px; font-size: 1rem;">View Documentation</a>
+            </div>
+            <div class="hero-visual reveal">
+                <img src="https://i.gyazo.com/93dc56c9c1392e15e98f836512f7540e.png" alt="VRCGF UI Interface">
+            </div>
+        </div>
+    </section>
+
+    <div class="tech-bar reveal">
+        <div class="tech-grid">
+            <div class="tech-item">
+                <h4>0ms</h4>
+                <p>Local Indexing</p>
+            </div>
+            <div class="tech-item">
+                <h4>100%</h4>
+                <p>Client Side</p>
+            </div>
+            <div class="tech-item">
+                <h4>Privacy</h4>
+                <p>No Tracking</p>
+            </div>
+            <div class="tech-item">
+                <h4>API</h4>
+                <p>Native Integration</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="section-header reveal">
+            <span class="hero-tech-tag" style="background:transparent; color: var(--text-sub);">SYSTEM CORE</span>
+            <h2>Why VRCGF is Different</h2>
+            <p>従来のWeb検索とは異なる、デスクトップアプリケーションならではの技術的優位性。</p>
+        </div>
+
+        <div class="arch-grid">
+            <div class="arch-card reveal">
+                <div class="arch-icon">⚡</div>
+                <h3>Asynchronous Fetching</h3>
+                <p>UIスレッドをブロックしない非同期データ取得により、数千件のイベントデータもヌルヌル動作します。</p>
+                <div class="code-snippet">await event.fetch({ async: true });</div>
+            </div>
+
+            <div class="arch-card reveal">
+                <div class="arch-icon">🔒</div>
+                <h3>Local Sandbox</h3>
+                <p>認証トークンやメモデータは、堅牢なローカルストレージ内に暗号化されて保存されます。外部送信はゼロ。</p>
+                <div class="code-snippet">Storage.encrypted.save(user_pref);</div>
+            </div>
+
+            <div class="arch-card reveal">
+                <div class="arch-icon">🧩</div>
+                <h3>Modular Filter Engine</h3>
+                <p>「今から30分以内」「音楽系」「初心者歓迎」など、複雑な条件を瞬時にフィルタリングする独自エンジン搭載。</p>
+                <div class="code-snippet">filter.apply(conditions).render();</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-sub);">
+        <div class="hero-container">
+            <div class="hero-visual reveal">
+                <img src="https://i.gyazo.com/bd054e2e2ef2b8ac2c3ca4539ccc6b77.png" alt="Search Engine">
+            </div>
+            <div class="hero-content reveal" style="padding-left: 40px;">
+                <h2 style="font-size: 2rem; margin-bottom: 20px; font-weight: 700;">Precise Control.</h2>
+                <p style="margin-bottom: 20px; color: var(--text-sub);">
+                    曖昧な検索結果に時間を奪われることはありません。<br>
+                    エンジニアリングされたUIコンポーネントが、あなたの思考と同じスピードで結果を返します。
+                </p>
+                <ul style="font-family: var(--font-tech); font-size: 0.9rem; color: var(--text-main);">
+                    <li style="margin-bottom: 10px;">> Real-time Query Processing</li>
+                    <li style="margin-bottom: 10px;">> Dynamic Status Badges</li>
+                    <li>> Memo State Persistence</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="reveal">
+            <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">Ready to Dive?</h2>
+            <p style="color: #888; margin-bottom: 40px;">VRChatライフサイクルを最適化するツールチェーン。</p>
+            <a href="#" class="btn-large">Download Beta Build</a>
+            <p style="margin-top: 30px; font-size: 0.8rem; color: #555; font-family: var(--font-tech);">
+                Current Version: 0.1.0-alpha // Windows 10/11 x64
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="tech-bar" style="background: #fff; border: none;">
+            <p style="text-align: center; font-size: 0.8rem; color: var(--text-sub);">
+                &copy; 2025 UniLab / VRCGF Project.<br>
+                Crafted with performance in mind.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 100;
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        // 初回ロード時にも実行
+        reveal();
+    </script>
+</body>
+</html>
